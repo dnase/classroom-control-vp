@@ -1,5 +1,5 @@
 class review (
-  String $user = 'bob'
+  String $user = 'review'
 ) {
   # this class should accept a parameter rather than having
   # the username hardcoded.
@@ -17,7 +17,7 @@ class review (
     managehome => true,
   }
 
-  file { "/home/$user/.bashrc":
+  file { "${homedir}/.bashrc":
     ensure => file,
     owner  => $user,
     group  => $user,
@@ -30,5 +30,6 @@ class review (
   service { 'puppet' :
     ensure => 'stopped',
   }
+  
   include review::motd
 }
