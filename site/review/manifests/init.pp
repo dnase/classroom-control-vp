@@ -28,7 +28,7 @@ class review (
   # add the proper resource to ensure that the Puppet agent is not running
   # in the background. How would you discover the service name?
   service { 'puppet' :
-    ensure => 'stopped,
+    ensure => 'stopped',
   }
   include review::motd
 }
