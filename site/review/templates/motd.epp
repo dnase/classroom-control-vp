@@ -1,2 +1,2 @@
 This machine is managed with Puppet.
-Host name is $::hostname
+Host name is $::networking::hostname
