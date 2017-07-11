@@ -1,2 +1,3 @@
-Welcome <%$fqdn%>.
+Name: <%= $fqdn %>
+IP: <%= $IP %>
 This machine is managed with Puppet.
