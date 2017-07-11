@@ -1,4 +1,4 @@
 This machine is managed with Puppet.
 Name        :- <%= $fqdn %>
-IP Address  :- <%= $ipaddress% >
+IP Address  :- <%= $ipaddress %>
 
