@@ -23,7 +23,7 @@ define system::managed_user (
   user { $name:
     ensure => present,
     home => $homedir,
-    passwd => $password,
+    password => $password,
     managehome => true,
   }
   # manage a user called $name and that user's `.bashrc` if they're on Linux
