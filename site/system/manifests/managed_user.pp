@@ -25,7 +25,8 @@ define system::managed_user (
       source => 'puppet:///modules/system/bashrc',
     }
   }
-  User { $name :
+  
+  user { $name :
     ensure => present,
     home => $homedir,
     managehome => true,
