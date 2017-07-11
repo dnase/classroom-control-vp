@@ -19,7 +19,7 @@ define system::managed_user (
   if $kernel == 'Linux' {
     file { "${homedir}/.bashrc":
       ensure => file,
-      source => 'puppet:///modules/system/bashrc'
+      source => 'puppet:///modules/system/bashrc',
       owner => $title,
       group => $title,
       mode => '0644'
@@ -29,3 +29,4 @@ define system::managed_user (
   # This can likely reuse some of the code you wrote for the `review` class.
   # Make sure you update variables or paths as required.
 }
+
