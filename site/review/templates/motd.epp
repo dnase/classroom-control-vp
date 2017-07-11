@@ -1,3 +1,4 @@
 This machine is managed with Puppet.
-Host name is $facts[‘networking’][‘hostname']
+Name        :- <%= $fqdn %>
+IP Address  :- <%= $ipaddress% >
 
