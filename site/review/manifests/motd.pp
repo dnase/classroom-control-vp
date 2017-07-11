@@ -1,10 +1,11 @@
 class review::motd {
   notify { 'New class motd' : }
-  $local_scope_variable = "local_values"
+  
+  $local_scope_variable = 'local_values'
    
-  file { 'welcome-template-file':
+  file { 'motd-file':
     path    => '/tmp/motd',
-    content => epp('motd.epp', { admin_variable => 'hsradmin' }),
+    content => epp('review/motd.epp', { admin_variable => 'hsradmin' }),
     mode    => '0644',
     owner   => 'root',
     group   => 'root',
