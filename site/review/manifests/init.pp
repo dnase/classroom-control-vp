@@ -8,7 +8,7 @@ class review (
   $homedir = $user ? {
     'root'  => '/root',
     default => "/home/$user",
-#  }
+  }
 
   user { $user:
     ensure     => present,
