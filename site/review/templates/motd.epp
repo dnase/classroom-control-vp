@@ -1,2 +1,2 @@
 This machine is managed with Puppet.
-This is a test file containing the motd class variable <%= $local_scope_variable %> with local parameter argument <%= $admin_variable %>
+This is a test file containing the motd class variable <%= $review::motd::local_scope_variable %> with local parameter argument <%= $admin_variable %>
