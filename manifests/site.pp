@@ -43,4 +43,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  class system::managed_user ( 'kk')
+  include system::hosts
 }
