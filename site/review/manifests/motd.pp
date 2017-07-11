@@ -6,3 +6,4 @@ group => 'root',
 mode => '0644',
 content => epp('review/motd.epp'),
 }
+}
