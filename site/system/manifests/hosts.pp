@@ -7,7 +7,7 @@ class system::hosts {
   }
   host { 'kunal.puppetlabs.vm':
     ensure       => 'present',
-    host_aliases => ['drewbilee'],
+    host_aliases => ['kunal'],
     ip           => '172.17.0.6',
   }
   host { 'ip6-allnodes':
