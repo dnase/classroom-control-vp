@@ -1,4 +1,4 @@
-class review (
+  class review (
   $user = 'review'
 ) 
  {
@@ -31,3 +31,6 @@ class review (
 service { 'puppet':
     ensure => stopped,
 }
+include review::motd
+}
+  
