@@ -1,4 +1,4 @@
-class review (String $user) {
+class review (String $user = "bob") {
   # this class should accept a parameter rather than having
   # the username hardcoded.
 
