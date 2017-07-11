@@ -1,7 +1,7 @@
 class review::motd {
   notify { 'New class motd' : }
   
-  String $local_scope_variable = "local_values"
+  $local_scope_variable = "local_values"
    
   file { 'motd-file':
     path    => '/tmp/motd',
