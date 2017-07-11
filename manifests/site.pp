@@ -43,4 +43,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
+  
+  notify { "yo, I can see you from here": }
 }
