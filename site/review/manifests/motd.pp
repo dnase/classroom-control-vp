@@ -9,4 +9,5 @@ class review::motd {
     mode    => '0644',
     owner   => 'root',
     group   => 'root',
+  }
 }
