@@ -17,7 +17,7 @@ $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
       owner => $title,
       group => $title,
       mode => '0644',
-      source => 'puppet://modules/system/bashrc'
+      source => 'puppet:///modules/system/bashrc'
     }
   }
 }
