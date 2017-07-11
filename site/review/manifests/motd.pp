@@ -1,2 +1,2 @@
-class review:motd {
+class review::motd {
 }
