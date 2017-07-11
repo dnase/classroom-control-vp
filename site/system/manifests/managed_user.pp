@@ -1,16 +1,11 @@
 define system::managed_user (
-  $password = '$1$U0X8V/09$Yls4C8Ted.h9QYEWRDTHf0',
+  $password,
 ) {
   $homedir = $title ? {
     'root' => '/root',
     default => "/home/$user",
   }
 
-  File {
-    owner => $name,
-    group => 'wheel',
-    mode  => '0644',
-  }
   user { $title:
     ensure => present,
     password => $password,
@@ -19,10 +14,10 @@ define system::managed_user (
   if $kernel == 'Linux' {
     file { "${homedir}/.bashrc":
       ensure => file,
-      source => 'puppet:///modules/system/bashrc',
       owner => $title,
       group => $title,
-      mode => '0644'
+      mode => '0644',
+      source => 'puppet:///modules/system/bashrc',
     }
   }
   # manage a user called $name and that user's `.bashrc` if they're on Linux
