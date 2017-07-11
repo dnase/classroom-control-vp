@@ -30,6 +30,6 @@ class review (
   # in the background. How would you discover the service name?
   service  { 'puppet':
     ensure => stopped,
-    enabled => false,
+    enable => false,
   }
 }
