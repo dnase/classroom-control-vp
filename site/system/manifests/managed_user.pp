@@ -11,7 +11,7 @@ $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
     managehome => true,
   }
   
-  if $kernel == 'Linux' {
+  if $::kernel == 'Linux' {
     file { "${homedir}/.bashrc":
       ensure => file,
       owner => $title,
