@@ -40,3 +40,4 @@ host { 'master.puppetlabs.vm':
   ip           => '172.17.0.1',
   target       => '/etc/hosts',
 }
+}
