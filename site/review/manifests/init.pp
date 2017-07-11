@@ -1,5 +1,6 @@
-class review {
-  
+class review (
+$user = 'review',
+)  {
   include review::motd
   # Uncomment and use this variable where appropriate
   $homedir = $user ? {
