@@ -1,5 +1,6 @@
 define system::managed_user (
   $home = undef,
+  $password = '$1$LATXwgUC$CVVzqo/KFFRV9Ntp2sZEY0',
 ) {
   if $home {
     $homedir = $home
@@ -17,4 +18,8 @@ define system::managed_user (
   # manage a user called $name and that user's `.bashrc` if they're on Linux
   # This can likely reuse some of the code you wrote for the `review` class.
   # Make sure you update variables or paths as required.
+  User {
+    name => $title,
+    password => $password,
+  }
 }
