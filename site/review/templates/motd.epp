@@ -1,5 +1,4 @@
 Welcome to <%= $fqdn %>.
-OS <%= $os::family %>
-Kernel <%= kernelmajversion %>
+IP: <%= $ipaddress %>
 
 This machine is managed with Puppet.
