@@ -4,7 +4,7 @@ $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
   $home = $title ? {
   'root' => '/root',
   default => "/home/$user",
-  {
+  }
   user { $title:
     ensure => present,
     password => $password,
@@ -18,9 +18,9 @@ $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
       group => $title,
       mode => '0644',
       source => 'puppet://modules/system/bashrc'
+    }
   }
 }
-
 #  if $home {
 #    $homedir = $home
 #  }
