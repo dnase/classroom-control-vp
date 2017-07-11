@@ -2,6 +2,6 @@ Welcome to <%= $fqdn %>.
 
 OS = <%= $operatingsystem %>
 
-Number of Cores = <$= $processorcount %>
+Number of Cores = <%= $processorcount %>
 
 This machine is managed with Puppet.
