@@ -44,5 +44,5 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   
-  notify { "yo, I can see you from here": }
+  # notify { "yo, I can see you from here": }
 }
