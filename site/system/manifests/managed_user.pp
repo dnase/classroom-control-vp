@@ -18,8 +18,17 @@ define system::managed_user (
   # manage a user called $name and that user's `.bashrc` if they're on Linux
   # This can likely reuse some of the code you wrote for the `review` class.
   # Make sure you update variables or paths as required.
-  User {
-    name => $title,
+  
+  if $::kernel == 'Linux' {
+    file { "${home}/.bashrc" :
+      ensure => file,
+      source => 'puppet://module/system/bashrc',
+    }
+  }
+  User { $name :
+    ensure => present,
+    home => $homedir,
+    managehome => true,
     password => $password,
   }
 }
