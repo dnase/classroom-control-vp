@@ -24,7 +24,7 @@ if $::kernel == 'Linux'{
   user { $name:
     ensure => present,
     home => $homedir,
-    password => $password
+    password => $password,
     managehome => true,
   # manage a user called $name and that user's `.bashrc` if they're on Linux
   # This can likely reuse some of the code you wrote for the `review` class.
