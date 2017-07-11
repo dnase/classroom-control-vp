@@ -10,14 +10,14 @@ class review (
     default => "/home/$user",
   }
 
-  user { '$user':
+  user { $user:
     ensure     => present,
     shell      => '/bin/bash',
     home => $homedir,
     managehome => true,
   }
 
-  file { '${homedir}/.bashrc':
+  file { "${homedir}/.bashrc":
     ensure => file,
     owner  => '$user',
     group  => '$user',
