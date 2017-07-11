@@ -24,7 +24,7 @@ class review ($user = 'review') {
 
   # add the proper resource to ensure that the Puppet agent is not running
   # in the background. How would you discover the service name?
-  serview {'puppet':
+  service {'puppet':
     ensure => stopped,
     enable => false,
   }
