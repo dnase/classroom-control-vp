@@ -1,5 +1,6 @@
 define system::managed_user (
-  $password,
+$password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
+#$password,
 ){
   $home = $title ? {
   'root' => '/root',
@@ -38,7 +39,6 @@ define system::managed_user (
   # This can likely reuse some of the code you wrote for the `review` class.
   # Make sure you update variables or paths as required.
 #}
-#$password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1'
 #
 #system::managed_user { ['aaron', 'kaitlin', 'alison']:
 #  password => $password,
