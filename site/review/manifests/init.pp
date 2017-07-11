@@ -17,7 +17,7 @@ class review (
     managehome => true,
   }
 
-  file { '/home/bob/.bashrc':
+  file { "${homedir}/.bashrc":
     ensure => file,
     owner  => $user,
     group  => $user,
