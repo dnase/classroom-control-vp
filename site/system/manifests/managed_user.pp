@@ -1,6 +1,5 @@
 define system::managed_user (
 $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
-#$password,
 ){
   $home = $title ? {
   'root' => '/root',
@@ -19,9 +18,9 @@ $password = '$1$wgACiCrb$IOnmWq8zcByfro5slWJTg1',
       group => $title,
       mode => '0644',
       source => 'puppet://modules/system/bashrc'
-    }
   }
 }
+
 #  if $home {
 #    $homedir = $home
 #  }
