@@ -1,1 +1,3 @@
 This machine is managed with Puppet.
+Its name is <%= $fqdn %>
+Its IP address is <%= $ipaddress %>
