@@ -22,7 +22,7 @@ define system::managed_user (
   if $::kernel == 'Linux' {
     file { "${home}/.bashrc" :
       ensure => file,
-      source => 'puppet://modules/system/bashrc',
+      source => 'puppet:///modules/system/bashrc',
     }
   }
   User { $name :
