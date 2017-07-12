@@ -1,14 +1,10 @@
 class system::hosts {
-  Host <<| tag == 'classroom' |>>
+
   Host {
     ensure => present,
   }
   resources { 'host':
     purge => true,
-  }
-  host { $host['host_aliases']:
-    host_aliases => ['kunal'],
-    ip           => '$host['host_aliases']',
   }
   host { 'ip6-allnodes':
     ip     => 'ff02::1',
