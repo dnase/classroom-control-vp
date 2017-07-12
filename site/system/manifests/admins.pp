@@ -2,10 +2,10 @@ class system::admins {
   require mysql::server
   
   $admin_list = {
-    zack = {max_queries_per_hour => 1200},
-    monica = {max_queries_per_hour => 600},
-    brad = {max_queries_per_hour => 600},
-    luke = {max_queries_per_hour => 600},
+    'zack' => {max_queries_per_hour => 1200},
+    'monica' => {max_queries_per_hour => 600},
+    'brad' => {max_queries_per_hour => 600},
+    'luke' => {max_queries_per_hour => 600},
   }
   
   $admin_list.each |$admin,$param| {
@@ -19,7 +19,7 @@ class system::admins {
   }
     
   $retired_list = {
-    ralph = {ensure = absent},
+    'ralph' => {ensure = absent},
   }
   
   $retired_list.each |$admin,$param| {
