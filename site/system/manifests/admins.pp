@@ -17,11 +17,11 @@ require mysql::server
       ensure => present,
       max_queries_per_hour => $params['max_queries_per_hour'],
     }
-  user { $user:
-    ensure => present,
-    managehome => true,
+    user { $user:
+      ensure => present,
+      managehome => true,
+    }
   }
-}
   $retired.each |$user| {
     mysql_user { "${user}@localhost":
     ensure => absent,
@@ -30,3 +30,4 @@ require mysql::server
      ensure => absent,
   }
  }
+}
