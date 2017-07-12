@@ -26,11 +26,7 @@ class files {
     group => 'root',
     mode => '0644',
   }
-  concat::fragment { 'motd header':
-    target  => '/etc/motd',
-    order   => '01',
-    content => epp('files/motd_header.epp'),
-  }
+  
 
   # Add a few fragments to be appended to /etc/motd
 concat::fragment { 'motd header':
