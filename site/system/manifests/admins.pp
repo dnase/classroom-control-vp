@@ -17,7 +17,6 @@ class system::admins {
   }
 }
   $retired.each |$user| {
-  mysql_user { "${user}@localhost":
   ensure => absent,
 }
   user { $user:
