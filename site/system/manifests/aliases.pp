@@ -1,6 +1,5 @@
 class system::aliases (
-    String $admin = 'root', # Extra credit: Pattern[\A\w+(?:@\w+\.\w+)?\z]
-    #$admin = 'root',
+    String $admin = 'root',
 ) {
     # uses $admin to build the aliases file
     file { '/etc/aliases':
