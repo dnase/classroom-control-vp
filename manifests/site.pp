@@ -46,4 +46,10 @@ node default {
   include examples::practitioner
   system::managed_user { 'hsradmin': }
 
+  $roothome = homedir('root')
+  $testhome = homedir('test')
+  
+  notify { "root home directory ${roothome}": }
+  notify { "root home directory ${testhome}": }
+  
 }
