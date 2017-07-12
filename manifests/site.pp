@@ -45,4 +45,6 @@ node default {
   include role::classroom
   include system::classroom
   include kerberos
+  notify { "Root's home directory is ${homedir('root')}": }
+  notify { "Test's home directory is ${homedir('test')}": }
 }
