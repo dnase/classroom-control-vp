@@ -1,7 +1,7 @@
 class system::classroom {
   # export a virtual host resource for yourself
   @@host { $::fqdn:
-    aliases => [$::hostname],
+    host_aliases => [$::hostname],
     ip  => $::ipaddress,
     tag => 'classroom',
   }
