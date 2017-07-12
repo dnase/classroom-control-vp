@@ -10,5 +10,24 @@ class system::admins_pick {
    'luke'   => {},    
    'zack'   => { max_queries_per_hour => '1200' },  
   }
+   $admins.each |$user, $params| {    
+    mysql_user { "${user}@localhost":     
+    ensure               => present,      
+    max_queries_per_hour => pick($params['max_queries_per_hour'],                                   
+                    $default_max_queries_per_hour),    
+   }
+ 
+  user { $user:      
+  ensure     => present,      
+  managehome => true,   
+  }
+  
+   user { $user:      
+   ensure => absent,    
+   }
+  }
+}
+
+
  
  
