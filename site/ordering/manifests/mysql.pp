@@ -8,6 +8,6 @@ class ordering::mysql {
     php_enable  => true,
     perl_enable => true,
   }
-
+class ::mysql::server -> Class ::mysql::bindings
 
 }
