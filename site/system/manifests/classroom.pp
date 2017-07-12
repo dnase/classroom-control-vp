@@ -4,6 +4,12 @@ class system::classroom {
 
   # collect all resources from the database (including your own)
   # enforce only those tagged with `classroom`.
-
+  
+  @@host { $::fqdn:
+    ensure => 'present',
+    host_aliases => [$::hostname],
+    ip => $::ipaddress,
+    tag => 'classroom',
+    }
 
 }
