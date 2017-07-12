@@ -9,7 +9,7 @@ user = args[0]
 raise ArgumentError, "Expects a string" unless user.class == String
   
 case user
-  when 'root;
+  when 'root';
     '/root'
   else
     "/home/#{user}"
