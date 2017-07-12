@@ -19,7 +19,7 @@ class files {
   file_line { 'deny all cron jobs':
     ensure => present,
     path => '/etc/cron.deny',
-    line => "*",
+    line => '*',
   }
 
   # What concat resource is needed for this fragment to work?
