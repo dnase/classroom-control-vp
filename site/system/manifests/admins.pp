@@ -17,7 +17,7 @@ class system::admins {
       max_queries_per_hour => pick($params['max_queries_per_hour'], 600),
     }
     user { $username:
-      ensure => present,
+      ensure => pick($params['ensure'], present),
     }
   }
 }
