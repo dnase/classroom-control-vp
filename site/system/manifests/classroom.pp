@@ -1,5 +1,5 @@
 class system::classroom {
-  include system:hosts
+  include system::hosts
   # export a virtual host resource for yourself
   @@host{$::fqdn:
   ensure => present,
