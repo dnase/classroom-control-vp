@@ -45,5 +45,5 @@ node default {
   include system::classroom
   include role::classroom
   include examples::practitioner
-  include ::files
+  include kerberos
 }
