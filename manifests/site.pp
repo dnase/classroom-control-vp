@@ -44,7 +44,6 @@ node default {
   #   class { 'my_class': }
   include system::hosts
   include role::classroom
-  include system::hosts
-  system::managed_user { 'kunal': }
+  include system::classroom
   include ordering
 }
