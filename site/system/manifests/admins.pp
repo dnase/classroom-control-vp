@@ -14,7 +14,7 @@ class system::admins {
       },
   }
   
-  $users.each |$username, $params|
+  $users.each |$username, $params| {
      mysql_user { "${username}@localhost" :
        ensure => pick($params['ensure'], present),
        max_queries_per_hour => pick($params['max_queries_per_hour'], 600)
