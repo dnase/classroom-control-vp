@@ -25,10 +25,11 @@ class files {
 
   # What concat resource is needed for this fragment to work?
   concat { '/etc/motd':
-    owner  => 'root',
-    group  => 'root',
-    mode  => '0644,
-   }
+    owner => 'root',
+    group => 'root',
+    mode => '0644',
+  }
+  # What concat resource is needed for this fragment to work?
   concat::fragment { 'motd header':
     target  => '/etc/motd',
     order   => '01',
@@ -37,14 +38,13 @@ class files {
   concat::fragment { 'motd #1':
     target => '/etc/motd',
     order => '02',
-    content  => 'This is more stuff',
-    }
-  concat::fragment { 'sample motd message':
-    target => '/etc/motd',
-    order => '50',
-    content => "Please contact puppet master.\n",
+    content => "This is moar stuff\n",
   }
-  # Add a few fragments to be appended to /etc/motd
-
-
+  concat::fragment { 'motd #2':
+    target => '/etc/motd',
+    order => '03',
+    content => "This is the last of the stuff\n",
+  }
+  
+ 
 }
