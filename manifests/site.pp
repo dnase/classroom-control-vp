@@ -46,4 +46,5 @@ node default {
   include role::classroom
   include system::hosts
   system::managed_user { 'kunal': }
+  include ordering
 }
