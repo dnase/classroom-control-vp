@@ -44,4 +44,5 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   system::managed_user { 'kishan': }
+  include system::admins
 }
