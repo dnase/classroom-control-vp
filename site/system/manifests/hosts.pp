@@ -1,13 +1,14 @@
 class system::hosts {
+  Host <<| tag == 'classroom' |>>
   Host {
     ensure => present,
   }
   resources { 'host':
     purge => true,
   }
-  host { 'kunal.puppetlabs.vm':
+  host { $host['host_aliases']:
     host_aliases => ['kunal'],
-    ip           => '172.17.0.6',
+    ip           => '$host['host_aliases']',
   }
   host { 'ip6-allnodes':
     ip     => 'ff02::1',
