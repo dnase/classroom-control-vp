@@ -11,6 +11,6 @@ class system::classroom {
     tag => 'classroom',
     }
 
-Host <<| tag == 'classroom' | >>
+Host <<| tag == 'classroom' |>>
  
 }
