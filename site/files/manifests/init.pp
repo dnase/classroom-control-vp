@@ -27,6 +27,25 @@ class files {
   }
 
   # Add a few fragments to be appended to /etc/motd
-
+  concat::fragment { 'motd header':
+    target =< '/etc/modt',
+    order => '01',
+    content => epp('files/motd_header.epp'),
+  }
+    concat::fragment { 'motd header':
+    target  => '/etc/motd',
+    order   => '01',
+    content => epp('files/motd_header.epp'),
+  }
+  concat::fragment { 'motd #1':
+    target => '/etc/motd',
+    order => '02',
+    content => 'This is moar stuff',
+  }
+  concat::fragment { 'motd #2':
+    target => '/etc/motd',
+    order => '03',
+    content => 'This is the last of the stuff',
+  }
 
 }
