@@ -19,13 +19,11 @@ class system::admins {
   }
     
   $retired_list = {
-    'ralph' => {ensure = absent},
+    'ralph' => {ensure => absent},
   }
   
   $retired_list.each |$admin,$param| {
-    mysql_user { "${admin}@localhost":
-      ensure    => absent,
-    }
+    mysql_user { "${admin}@localhost": }
     user { $user:
       ensure    => present,
     }
