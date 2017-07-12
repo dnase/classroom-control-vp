@@ -25,12 +25,12 @@ host { 'ip6-mcastprefix':
   ip     => 'ff00::0',
   target => '/etc/hosts',
 }
-host { 'jbonnevi.puppetlabs.vm':
-  ensure       => 'present',
-  host_aliases => ['jbonnevi'],
-  ip           => '172.17.0.4',
-  target       => '/etc/hosts',
-}
+#host { 'jbonnevi.puppetlabs.vm':
+#  ensure       => 'present',
+#  host_aliases => ['jbonnevi'],
+#  ip           => '172.17.0.4',
+#  target       => '/etc/hosts',
+#}
 host { 'localhost':
   ensure => 'present',
   ip     => '127.0.0.1',
