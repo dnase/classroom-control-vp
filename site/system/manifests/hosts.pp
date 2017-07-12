@@ -3,11 +3,11 @@ class system::hosts {
     purge => true,
   }
   
-  host { 'hkanani.puppetlabs.vm':
-    ensure       => 'present',
-    host_aliases => ['hkanani'],
-    ip           => '172.17.0.7',
-  }
+  #host { 'hkanani.puppetlabs.vm':
+  #  ensure       => 'present',
+  #  host_aliases => ['hkanani'],
+  #  ip           => '172.17.0.7',
+  #}
   host { 'ip6-allnodes':
     ensure => 'present',
     ip     => 'ff02::1',
