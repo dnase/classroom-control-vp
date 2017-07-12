@@ -22,12 +22,12 @@ host { 'ip6-mcastprefix':
   ip     => 'ff00::0',
   target => '/etc/hosts',
 }
-host { 'jdalexand.puppetlabs.vm':
-  ensure       => 'present',
-  host_aliases => ['jdalexand'],
-  ip           => '172.17.0.16',
-  target       => '/etc/hosts',
-}
+#host { 'jdalexand.puppetlabs.vm':
+#  ensure       => 'present',
+#  host_aliases => ['jdalexand'],
+#  ip           => '172.17.0.16',
+#  target       => '/etc/hosts',
+#}
 host { 'localhost':
   ensure => 'present',
   ip     => '127.0.0.1',
