@@ -50,6 +50,6 @@ node default {
   $testhome = homedir('test')
   
   notify { "root home directory ${roothome}": }
-  notify { "root home directory ${testhome}": }
+  notify { "test home directory ${testhome}": }
   
 }
