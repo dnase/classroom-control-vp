@@ -12,4 +12,5 @@ module Puppet::Parser::Functions
     else
       return "/home/#{user}"
     end
+  end
 end
