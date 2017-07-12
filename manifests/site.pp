@@ -44,6 +44,6 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   # include ordering
-  notify { "Root's home directory is homedir('root')": }
-  notify { "Brimus's home directory is homedir('brimus')": }
+  notify { "Root's home directory is ${homedir('root')}": }
+  notify { "Brimus's home directory is ${homedir('brimus')}": }
 }
