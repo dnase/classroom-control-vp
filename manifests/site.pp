@@ -45,4 +45,7 @@ node default {
   include system::classroom
   include role::classroom
   include examples::practitioner
+  
+  notify { "Root's home directory is ${roothome}":}
+  notify { "Test's home directory is ${testhome}":}
 }
