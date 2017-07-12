@@ -2,6 +2,7 @@ class system::classroom {
   include system::hosts
   # export a virtual host resource for yourself
   @@host { $::fqdn:
+    ensure => present,
     ip => $::ipaddress,
     host_aliases => [$::hostname],
     tag => 'classroom',
