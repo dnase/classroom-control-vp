@@ -6,13 +6,6 @@ class system::hosts {
     purge => true,
   }
   
-  host { 'hsravidatta.puppetlabs.vm':
-  ensure       => 'present',
-  host_aliases => ['hsravidatta'],
-  ip           => '172.17.0.9',
-  target       => '/etc/hosts',
-  }
-
   host { 'ip6-allnodes':
     ensure => 'present',
     ip     => 'ff02::1',
