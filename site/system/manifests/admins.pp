@@ -11,7 +11,7 @@ class system::admins {
   $admin_list.each |$admin,$param| {
     mysql_user { "${admin}@localhost":
       ensure    => present,
-      max_queries_per_hour  => $params['max_queries_per_hour'],
+      max_queries_per_hour  => $param['max_queries_per_hour'],
     }
     user { $user:
       ensure    => present,
