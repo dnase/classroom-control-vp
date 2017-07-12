@@ -5,7 +5,7 @@ Puppet::Parser::Functions.newfunction(:homedir, :type => :rvalue) do |args|
   user = args[0]
   case user
   when 'root'
-  return '/root'
+    return '/root'
   else
-  return "/home/#{user}"
- end
+    return "/home/#{user}"
+  end
