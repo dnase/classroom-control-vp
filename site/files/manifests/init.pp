@@ -39,5 +39,10 @@ class files {
     content => "This is a example motd content an order : 50\n",
   }
   
+   concat::fragment { 'motd pre-body':
+    target  => '/etc/motd',
+    order => '20',
+    content => "This is a example motd content an order : 20\n",
+  }
 
 }
