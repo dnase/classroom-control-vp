@@ -1,5 +1,5 @@
 class system::aliases (
-    String $admin = $system::params::admin,
+    String $admin,
 ) {
     # uses $admin to build the aliases file
     file { '/etc/aliases':
