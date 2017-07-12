@@ -1,8 +1,8 @@
 class system::classroom {
   include system:hosts
   # export a virtual host resource for yourself
-@@host{$::fqdn:
-  ensure => 'present',
+  @@host{$::fqdn:
+  ensure => present,
   host_aliases => [$::hostname],
   ip => $::ipaddress,
   tag => 'classroom',
