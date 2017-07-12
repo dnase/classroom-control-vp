@@ -36,12 +36,12 @@ class files {
   concat::fragment { 'motd header two':
     target  => '/etc/motd',
     order   => '02',
-    content => "See this one time",
+    content => "See this one time\n",
   }
   concat::fragment { 'motd header three':
     target  => '/etc/motd',
     order   => '03',
-    content => "See this again",
+    content => "See this again\n",
   }
 
 }
