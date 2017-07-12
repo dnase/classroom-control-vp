@@ -1,11 +1,13 @@
 # Write a simple function called homedir that accepts a single string argument.
 # It should return the conventional Linux home directory based on a username
 module Puppet::Parser::Functions
-  newfunction(:basename,
+  newfunction(:homedir,
     :type  => :rvalue,
     :arity => 1
   ) do |args|
-   case user
+    user = args[0]
+    raise ArgumentError, "Expects a string" unless user.class == String
+    case user
     when 'root'
       return '/root'
     else
