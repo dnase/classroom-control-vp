@@ -1,5 +1,5 @@
 class ordering::mysql {
-class { '::mysql::server':
+
 root_password => 'strongpassword',
 }
 class { '::mysql::bindings':
