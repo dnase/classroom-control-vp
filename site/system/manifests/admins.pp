@@ -1,18 +1,21 @@
-class system::admins_pick {
+class system::admins {
 require mysql::server
-$default_max_queries_per_hour = '600'
+# You can either use this resource default, or declare each parameter
+# directly in the $admins hash
+# Mysql_user {
+# max_queries_per_hour => '600',
+# }
 $retired = [ 'ralph' ]
 $admins = {
-'brad' => {},
-'monica' => {},
-'luke' => {},
+'brad' => { max_queries_per_hour => '600' },
+'monica' => { max_queries_per_hour => '600' },
+'luke' => { max_queries_per_hour => '600' },
 'zack' => { max_queries_per_hour => '1200' },
 }
 $admins.each |$user, $params| {
 mysql_user { "${user}@localhost":
 ensure => present,
-max_queries_per_hour => pick($params['max_queries_per_hour'],
-$default_max_queries_per_hour),
+max_queries_per_hour => $params['max_queries_per_hour'],
 }
 user { $user:
 ensure => present,
