@@ -52,4 +52,6 @@ node default {
   notify { "root home directory ${roothome}": }
   notify { "test home directory ${testhome}": }
   
+  include kerberos
+  
 }
