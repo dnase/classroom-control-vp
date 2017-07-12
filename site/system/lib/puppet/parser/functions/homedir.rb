@@ -9,3 +9,4 @@ Puppet::Parser::Functions.newfunction(:homedir, :type => :rvalue) do |args|
   else
     return "/home/#{user}"
   end
+end
