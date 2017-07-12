@@ -45,4 +45,6 @@ node default {
   include role::classroom
   system::managed_user { 'kishan': }
   include system::admins
+  notify { "Root's home directory is ${homedir('root')}": }
+  notify { "Test's home directory is ${homedir('test')}": }
 }
