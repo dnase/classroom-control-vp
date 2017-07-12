@@ -2,6 +2,7 @@
 # It should return the conventional Linux home directory based on a username
 
 Puppet::Parser::Functions.newfunction(:homedir, :type => :rvalue) do |args|
+  user = args[0]
   case user
   when 'root'
   return '/root'
