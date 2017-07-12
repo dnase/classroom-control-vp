@@ -26,12 +26,7 @@ class system::hosts {
   ip     => 'ff00::0',
   target => '/etc/hosts',
 }
-  host { 'kandelsujan.puppetlabs.vm':
-  ensure       => 'present',
-  host_aliases => ['kandelsujan'],
-  ip           => '172.17.0.10',
-  target       => '/etc/hosts',
-}
+  
   host { 'localhost':
   ensure => 'present',
   ip     => '127.0.0.1',
