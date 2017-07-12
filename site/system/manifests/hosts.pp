@@ -1,11 +1,11 @@
 class system::hosts {
   # paste the output of `puppet resource host` in this class
-  host { 'fidelm.puppetlabs.vm':
-    ensure       => 'present',
-    host_aliases => ['fidelm'],
-    ip           => '172.17.0.3',
-    target       => '/etc/hosts',
-  }
+  #host { 'fidelm.puppetlabs.vm':
+  #  ensure       => 'present',
+  #  host_aliases => ['fidelm'],
+  #  ip           => '172.17.0.3',
+  #  target       => '/etc/hosts',
+  #}
   host { 'ip6-allnodes':
     ensure => 'present',
     ip     => 'ff02::1',
