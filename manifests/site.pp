@@ -42,7 +42,8 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  include role::classroom
-  system::managed_user { 'kk': }
   include system::hosts
+  include role::classroom
+  include system::hosts
+  system::managed_user { 'kunal': }
 }
