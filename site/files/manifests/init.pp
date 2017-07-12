@@ -32,11 +32,6 @@ class files {
     order => '01',
     content => epp('files/motd_header.epp'),
   }
-    concat::fragment { 'motd header':
-    target  => '/etc/motd',
-    order   => '01',
-    content => epp('files/motd_header.epp'),
-  }
   concat::fragment { 'motd #1':
     target => '/etc/motd',
     order => '02',
