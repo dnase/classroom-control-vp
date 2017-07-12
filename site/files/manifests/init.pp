@@ -13,7 +13,11 @@ class files {
     line   => 'root',
   }
   # Add a rule to cron.deny to deny jobs by default
-
+  file_line { 'prevent cron jobs':
+    ensure => present,
+    path   => '/etc/cron.deny',
+    line   => '',
+  }
 
   # What concat resource is needed for this fragment to work?
   concat::fragment { 'motd header':
@@ -23,6 +27,11 @@ class files {
   }
 
   # Add a few fragments to be appended to /etc/motd
-
+  concat::fragment { 'motd body':
+    target  => '/etc/motd',
+    order => '50',
+    content => "This is a example motd content an order : 50\n",
+     
+  }
 
 }
