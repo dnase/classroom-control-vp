@@ -3,6 +3,7 @@ class system::classroom {
   @@host { $::fqdn:
     ip            => $::ipaddress,
     host_aliases  => $::hostname,
+    tag => 'classroom',
   }
 
   # collect all resources from the database (including your own)
