@@ -8,7 +8,7 @@ class ordering::mysql {
     php_enable  => true,
     perl_enable => true,
   }
-  contain mysql::binfdings
-  contain mysql::server
+  #contain mysql::binfdings
+  #contain mysql::server
 
 }
