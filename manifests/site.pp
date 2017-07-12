@@ -1,3 +1,4 @@
+
 ## site.pp ##
 
 # This file (/etc/puppetlabs/puppet/manifests/site.pp) is the main entry point
@@ -43,5 +44,6 @@ node default {
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  
+  notify { "Root's home directory is ${homedir('root')}": }
+  notify { "Test's home directory is ${homedir('test')}": }
 }
