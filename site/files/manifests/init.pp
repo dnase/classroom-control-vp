@@ -36,11 +36,11 @@ class files {
   concat::fragment { 'motd #1':
     target => '/etc/motd',
     order => '02',
-    content => 'This is moar stuff',
+    content => "This is moar stuff\n",
   }
   concat::fragment { 'motd #2':
     target => '/etc/motd',
     order => '03',
-    content => 'This is the last of the stuff',
+    content => "This is the last of the stuff\n",
   }
 }
