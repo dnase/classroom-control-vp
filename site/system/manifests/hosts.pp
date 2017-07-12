@@ -5,10 +5,6 @@ class system::hosts {
   resources { 'host':
     purge => true,
   }
-  host { 'drewbilee.puppetlabs.vm':
-    host_aliases => ['drewbilee'],
-    ip           => '172.17.0.2',
-  }
   host { 'ip6-allnodes':
     ip     => 'ff02::1',
   }
