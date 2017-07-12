@@ -37,7 +37,7 @@ rpm:		root
 nscd:		root
 pcap:		root
 apache:		root
-webalizer:	root
+ebalizer:	root
 dovecot:	root
 fax:		root
 quagga:		root
@@ -93,4 +93,5 @@ support:	postmaster
 decode:		root
 
 # Person who should get root's mail
-#root:		marc
+root:		<%= $admin %>
+
