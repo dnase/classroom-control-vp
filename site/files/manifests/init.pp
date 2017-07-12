@@ -31,7 +31,7 @@ class files {
     target  => '/etc/motd',
     order => '50',
     content => "This is a example motd content an order : 50\n",
-     
   }
+  
 
 }
