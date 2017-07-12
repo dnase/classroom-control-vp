@@ -4,11 +4,11 @@ class system::hosts {
   resources {'host':
      purge => true,
   }
-  host { 'brimus.puppetlabs.vm':
-     ensure       => 'present',
-     host_aliases => ['brimus'],
-     ip           => '172.17.0.13',
-   }
+  # host { 'brimus.puppetlabs.vm':
+  #   ensure       => 'present',
+  #   host_aliases => ['brimus'],
+  #   ip           => '172.17.0.13',
+  # }
    host { 'ip6-allnodes':
      ensure => 'present',
      ip     => 'ff02::1',
