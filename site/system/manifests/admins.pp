@@ -13,7 +13,7 @@ class system::admins {
       ensure    => present,
       max_queries_per_hour  => $param['max_queries_per_hour'],
     }
-    user { $user:
+    user { $admin:
       ensure    => present,
     }
   }
@@ -24,7 +24,7 @@ class system::admins {
   
   $retired_list.each |$admin,$param| {
     mysql_user { "${admin}@localhost": }
-    user { $user:
+    user { $admin:
       ensure    => present,
     }
   }
