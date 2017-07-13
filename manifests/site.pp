@@ -47,7 +47,7 @@ node default {
   include system::admins
   include kerberos
   $message = hiera('message')
-  noitfy {$message:}
+  notify {$message:}
   notify { "Root's home directory is ${homedir('root')}": }
   notify { "Test's home directory is ${homedir('test')}": }
 }
