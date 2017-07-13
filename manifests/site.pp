@@ -55,6 +55,9 @@ node default {
   $message = hiera_array("message")
   notify { "hiera lookup message ${message}": }
   
+  $ukey = hiera("unique_key")
+  notify { "hiera unique key ${ukey}": }
+  
   include kerberos
   
 }
