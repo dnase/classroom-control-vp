@@ -42,8 +42,6 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  include system::classroom
-  include role::classroom
-  include examples::practitioner
-  include kerberos
+  $message = hiera('message')
+  notify { $message: }
 }
