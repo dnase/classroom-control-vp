@@ -52,6 +52,9 @@ node default {
   notify { "root home directory ${roothome}": }
   notify { "test home directory ${testhome}": }
   
+  $message = hiera("message")
+  notify { "hiera lookup message ${message}": }
+  
   include kerberos
   
 }
