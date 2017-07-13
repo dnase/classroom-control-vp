@@ -45,4 +45,6 @@ node default {
   include role::classroom
   include ::files
   include kerberos
-}
+  $message = hiera('message')
+  notify { $message: }
+  }
