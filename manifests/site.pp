@@ -46,4 +46,5 @@ node default {
   include system::classroom
   include ::files
   include kerberos
+  include webapp::wordpress
 }
