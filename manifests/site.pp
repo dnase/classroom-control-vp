@@ -47,5 +47,5 @@ node default {
   system::managed_user { 'foo': }
   notify { "Root's home directory is ${homedir('root')}": }
   notify { "Foo's home directory is ${homedir('foo')}": }
-  
+  notify { $message: }
 }
